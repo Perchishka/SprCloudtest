@@ -1,5 +1,6 @@
 import { defineConfig } from "@playwright/test";
 import dotenv from "dotenv";
+import os from "node:os";
 dotenv.config({ override: true });
 
 /**
@@ -14,22 +15,35 @@ export default defineConfig({
   /* Retry on CI only */
   retries: process.env.CI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 1 : undefined,
+  workers: process.env.CI ? 2 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: [["html", { open: "never" }], ["line"], ["allure-playwright"]],
+  reporter: [
+    ["html", { open: "never" }],
+    ["line"],
+    [
+      "allure-playwright",
+      {
+        environmentInfo: {
+          OS: os.platform(),
+          Architecture: os.arch(),
+          NodeVersion: process.version,
+        },
+      },
+    ],
+  ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    /* Base URL to use in actions like `await page.goto('/')`. */
-    // baseURL: 'http://127.0.0.1:3000',
-
-    /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
+    screenshot: "only-on-failure",
+    video: {
+      mode: "on-first-retry",
+      size: { width: 640, height: 480 },
+    },
     trace: "on-first-retry",
   },
 
-  /* Configure projects for major browsers */
   projects: [
     {
-      name: "ui tests",
+      name: "ui_tests",
       testMatch: "ui/**/*",
       use: {
         baseURL: "https://www.saucedemo.com/",
@@ -37,7 +51,7 @@ export default defineConfig({
     },
 
     {
-      name: "api",
+      name: "api_tests",
       testMatch: "api/**/*",
       use: {
         baseURL: "https://reqres.in/api/",

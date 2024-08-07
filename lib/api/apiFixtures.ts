@@ -9,7 +9,7 @@ const fixtures = base.extend<ApiFixtures>({
   userApi: async ({ request }, use) => {
     const userApi = new UserApi(request);
     await use(userApi);
-  },
+  }
 });
 
 export { fixtures };
