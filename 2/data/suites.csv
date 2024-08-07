@@ -1,0 +1,7 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"failed","Wed Aug 07 16:23:25 GMT 2024","Wed Aug 07 16:23:25 GMT 2024","7","ui tests","ui/login.spec.ts","Login tests","","","failing login - invalid password",""
+"failed","Wed Aug 07 16:23:23 GMT 2024","Wed Aug 07 16:23:23 GMT 2024","8","ui tests","ui/login.spec.ts","Login tests","","","failing login - invalid username",""
+"passed","Wed Aug 07 16:23:26 GMT 2024","Wed Aug 07 16:23:27 GMT 2024","427","api tests","api/users.spec.ts","Users api tests","","","Delete user",""
+"passed","Wed Aug 07 16:23:27 GMT 2024","Wed Aug 07 16:23:27 GMT 2024","433","api tests","api/users.spec.ts","Users api tests","","","Update full user details",""
+"failed","Wed Aug 07 16:23:22 GMT 2024","Wed Aug 07 16:23:22 GMT 2024","7","ui tests","ui/login.spec.ts","Login tests","","","Create user",""
+"passed","Wed Aug 07 16:23:26 GMT 2024","Wed Aug 07 16:23:26 GMT 2024","307","api tests","api/users.spec.ts","Users api tests","","","Create user",""
