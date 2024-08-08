@@ -1,0 +1,7 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Aug 08 00:47:31 GMT 2024","Thu Aug 08 00:47:32 GMT 2024","523","ui_tests","ui/login.spec.ts","Login tests","","","failing login - invalid password",""
+"passed","Thu Aug 08 00:47:29 GMT 2024","Thu Aug 08 00:47:30 GMT 2024","848","ui_tests","ui/login.spec.ts","Login tests","","","Create user",""
+"passed","Thu Aug 08 00:47:33 GMT 2024","Thu Aug 08 00:47:34 GMT 2024","496","api_tests","api/users.spec.ts","Users api tests","","","Delete user",""
+"passed","Thu Aug 08 00:47:33 GMT 2024","Thu Aug 08 00:47:34 GMT 2024","445","api_tests","api/users.spec.ts","Users api tests","","","Update full user details",""
+"passed","Thu Aug 08 00:47:33 GMT 2024","Thu Aug 08 00:47:33 GMT 2024","318","api_tests","api/users.spec.ts","Users api tests","","","Create user",""
+"passed","Thu Aug 08 00:47:29 GMT 2024","Thu Aug 08 00:47:30 GMT 2024","779","ui_tests","ui/login.spec.ts","Login tests","","","failing login - invalid username",""
